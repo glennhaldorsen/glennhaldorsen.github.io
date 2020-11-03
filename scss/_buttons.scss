@@ -12,9 +12,11 @@
 .btn-primary {
   @extend %btn;
   background-color: $dark-color;
+  @include set-background($dark-color);
+  border: 1px solid $light-color;
 }
 
 .btn-secondary {
   @extend %btn;
-  background-color: lighten($dark-color, 10%);
+  @include set-background(lighten($dark-color, 10%));
 }

@@ -1,6 +1,4 @@
 @import 'config';
-@import 'utilities';
-@import 'buttons';
 
 * {
   box-sizing: border-box;
@@ -9,8 +7,7 @@
 }
 
 body {
-  background-color: $dark-color;
-  color: $light-color;
+  @include set-background($dark-color);
   font-family: $font-stack;
   line-height: 1.5;
 }
@@ -41,7 +38,6 @@ a {
 
   a {
     text-transform: uppercase;
-    color: $light-color;
     padding-bottom: 5px;
   }
 
@@ -65,8 +61,8 @@ a {
     @extend %h-shared;
     font-size: 34px;
   }
-
-  p {
-    margin: 15px 0;
-  }
 }
+
+@import 'utilities';
+@import 'buttons';
+@import 'mobile';
