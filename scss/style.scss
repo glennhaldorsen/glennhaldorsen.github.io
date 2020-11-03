@@ -1,0 +1,72 @@
+@import 'config';
+@import 'utilities';
+@import 'buttons';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $dark-color;
+  color: $light-color;
+  font-family: $font-stack;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      list-style: none;
+    }
+
+    li {
+      padding: 15px;
+    }
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  a {
+    text-transform: uppercase;
+    color: $light-color;
+    padding-bottom: 5px;
+  }
+
+  a:hover {
+    border-bottom: 2px solid $light-color;
+  }
+}
+
+.showcase {
+  margin-top: 30px;
+  %h-shared {
+    color: $primary-color;
+    line-height: 1.2;
+  }
+  h2 {
+    @extend %h-shared;
+    font-size: 20px;
+  }
+
+  h3 {
+    @extend %h-shared;
+    font-size: 34px;
+  }
+
+  p {
+    margin: 15px 0;
+  }
+}
